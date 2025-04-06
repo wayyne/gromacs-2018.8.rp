@@ -1,0 +1,15 @@
+ guy_001    H2     1     1.00784    0.000       A    0.00000e+00  0.00000e+00 ; hydrogen in H2 
+ guy_002    N2     7    14.00670    0.000       A    0.00000e+00  0.00000e+00 ; nitrogen in N2 
+ guy_003    O2     8    15.99940    0.000       A    0.00000e+00  0.00000e+00 ; oxygen in O2 
+ guy_004    F2     9    18.99840    0.000       A    0.00000e+00  0.00000e+00 ; florine in F2 
+ guy_005    Cl2    17   35.45300    0.000       A    0.00000e+00  0.00000e+00 ; chlorine in Cl2 
+ guy_006    Br2    35   79.90400    0.000       A    3.47000e-01  1.96648e+00 ; bromine in Br2 
+ guy_007    I2     53  126.90447    0.000       A    0.00000e+00  0.00000e+00 ; iodine in I2 
+ guy_008    CCO    6    12.01100    0.000       A    0.00000e+00  0.00000e+00 ; carbon in CO 
+ guy_009    OCO    8    15.99940    0.000       A    0.00000e+00  0.00000e+00 ; oxygen in CO 
+ guy_010    NNO    7    14.00670    0.029       A    0.00000e+00  0.00000e+00 ; nitrogen in NO 
+ guy_011    ONO    8    15.99940   -0.029       A    0.00000e+00  0.00000e+00 ; oxygen in NO
+ guy_012    HHCl   1     1.00784    0.179       A    0.00000e+00  0.00000e+00 ; hyrogen in HCl
+ guy_013    ClHCl  17   35.45300   -0.179       A    0.00000e+00  0.00000e+00 ; chlorine in HCl
+ guy_014    HHBr   1     1.00784    0.122       A    0.00000e+00  0.00000e+00 ; hydrogen in Hbr
+ guy_015    BrHBr  35   79.90400   -0.122       A    0.00000e+00  0.00000e+00 ; bromine in HBr

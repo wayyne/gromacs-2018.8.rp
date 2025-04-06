@@ -1,0 +1,1 @@
+/bin/c++   -march=core-avx2    -std=c++11   -O3 -DNDEBUG -funroll-all-loops -fexcess-precision=fast       CMakeFiles/template.dir/template.cpp.o  -o ../../bin/template  -Wl,-rpath,/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/lib ../../lib/libgromacs_rp.so.3.5.0 -fopenmp -lm -ltensorflow 

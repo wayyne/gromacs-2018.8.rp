@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/CMakeFiles/fftwBuild"
+		},
+		{
+			"file" : "/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/CMakeFiles/fftwBuild.rule"
+		},
+		{
+			"file" : "/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/CMakeFiles/fftwBuild-complete.rule"
+		},
+		{
+			"file" : "/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/fftwBuild-prefix/src/fftwBuild-stamp/fftwBuild-install.rule"
+		},
+		{
+			"file" : "/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/fftwBuild-prefix/src/fftwBuild-stamp/fftwBuild-mkdir.rule"
+		},
+		{
+			"file" : "/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/fftwBuild-prefix/src/fftwBuild-stamp/fftwBuild-download.rule"
+		},
+		{
+			"file" : "/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/fftwBuild-prefix/src/fftwBuild-stamp/fftwBuild-update.rule"
+		},
+		{
+			"file" : "/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/fftwBuild-prefix/src/fftwBuild-stamp/fftwBuild-patch.rule"
+		},
+		{
+			"file" : "/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/fftwBuild-prefix/src/fftwBuild-stamp/fftwBuild-configure.rule"
+		},
+		{
+			"file" : "/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/fftwBuild-prefix/src/fftwBuild-stamp/fftwBuild-build.rule"
+		},
+		{
+			"file" : "/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/fftwBuild-prefix/src/fftwBuild-stamp/fftwBuild-pre-download.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"fftwBuild"
+		],
+		"name" : "fftwBuild"
+	}
+}

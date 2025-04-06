@@ -1,0 +1,11 @@
+libdir=/work_bgfs/g/gdayhoff/grayson/lab/gmx+/local/lib64
+
+Name: libgromacs_rp
+Description: Gromacs library
+URL: http://www.gromacs.org
+Version: 2018.8
+Requires:  
+Libs.private: -lpthread -ldl -fopenmp
+Libs: -L${libdir} -lgromacs_rp  -lm 
+Cflags:  -I/work_bgfs/g/gdayhoff/grayson/lab/gmx+/local/include -DGMX_DOUBLE=0 -fopenmp -std=c++11 
+

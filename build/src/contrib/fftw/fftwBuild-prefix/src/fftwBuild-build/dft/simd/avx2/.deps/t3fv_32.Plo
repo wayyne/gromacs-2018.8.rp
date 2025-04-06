@@ -1,0 +1,176 @@
+t3fv_32.lo: \
+ /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/fftwBuild-prefix/src/fftwBuild/dft/simd/avx2/t3fv_32.c \
+ /usr/include/stdc-predef.h \
+ /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/fftwBuild-prefix/src/fftwBuild/dft/simd/avx2/../common/t3fv_32.c \
+ /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/fftwBuild-prefix/src/fftwBuild/dft/codelet-dft.h \
+ /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/fftwBuild-prefix/src/fftwBuild/kernel/ifftw.h \
+ ../../../config.h /usr/include/stdlib.h /usr/include/features.h \
+ /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
+ /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/bits/byteswap-16.h \
+ /usr/include/sys/types.h /usr/include/time.h /usr/include/sys/select.h \
+ /usr/include/bits/select.h /usr/include/bits/sigset.h \
+ /usr/include/bits/time.h /usr/include/sys/sysmacros.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/bits/stdlib-float.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h /usr/include/inttypes.h \
+ /usr/include/sys/time.h /usr/include/xlocale.h \
+ /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/fftwBuild-prefix/src/fftwBuild/dft/simd/t3f.h \
+ /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/fftwBuild-prefix/src/fftwBuild/simd-support/simd-avx2.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/immintrin.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/mmintrin.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/xmmintrin.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/mm_malloc.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/emmintrin.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/pmmintrin.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/tmmintrin.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/smmintrin.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/popcntintrin.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/wmmintrin.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/avxintrin.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/avx2intrin.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/lzcntintrin.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/bmiintrin.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/bmi2intrin.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/fmaintrin.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/f16cintrin.h \
+ /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/fftwBuild-prefix/src/fftwBuild/simd-support/simd-common.h
+
+/usr/include/stdc-predef.h:
+
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/fftwBuild-prefix/src/fftwBuild/dft/simd/avx2/../common/t3fv_32.c:
+
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/fftwBuild-prefix/src/fftwBuild/dft/codelet-dft.h:
+
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/fftwBuild-prefix/src/fftwBuild/kernel/ifftw.h:
+
+../../../config.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/features.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-64.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h:
+
+/usr/include/bits/waitflags.h:
+
+/usr/include/bits/waitstatus.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/bits/byteswap.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/bits/byteswap-16.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/time.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/bits/sigset.h:
+
+/usr/include/bits/time.h:
+
+/usr/include/sys/sysmacros.h:
+
+/usr/include/bits/pthreadtypes.h:
+
+/usr/include/alloca.h:
+
+/usr/include/bits/stdlib-float.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/bits/posix1_lim.h:
+
+/usr/include/bits/local_lim.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/bits/posix2_lim.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h:
+
+/usr/include/stdint.h:
+
+/usr/include/bits/wchar.h:
+
+/usr/include/inttypes.h:
+
+/usr/include/sys/time.h:
+
+/usr/include/xlocale.h:
+
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/fftwBuild-prefix/src/fftwBuild/dft/simd/t3f.h:
+
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/fftwBuild-prefix/src/fftwBuild/simd-support/simd-avx2.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/immintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/mmintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/xmmintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/mm_malloc.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/emmintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/pmmintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/tmmintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/smmintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/popcntintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/wmmintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/avxintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/avx2intrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/lzcntintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/bmiintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/bmi2intrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/fmaintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/f16cintrin.h:
+
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/src/contrib/fftw/fftwBuild-prefix/src/fftwBuild/simd-support/simd-common.h:

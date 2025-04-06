@@ -1,0 +1,88 @@
+PROJECT_NAME           = Gromacs
+@INCLUDE               = Doxyfile-version
+LAYOUT_FILE            = /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/docs/doxygen/DoxygenLayout.xml
+INPUT                  = /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/docs/doxygen \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/share/template
+FILE_PATTERNS          = *.c *.cpp *.h *.md
+# CUDA files could be included like this, but currently produce a lot of
+# warnings.
+# FILE_PATTERNS         += *.cu *.cuh
+EXAMPLE_PATH           = /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++
+RECURSIVE              = YES
+EXCLUDE                = /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/contrib \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/external \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/gromacs/linearalgebra/gmx_blas \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/gromacs/linearalgebra/gmx_lapack \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/gromacs/selection/parser.cpp \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/gromacs/selection/parser.h \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/gromacs/selection/scanner.cpp  \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/gromacs/gmxlib/nonbonded/nb_kernel_avx_128_fma_double \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/gromacs/gmxlib/nonbonded/nb_kernel_avx_128_fma_single \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/gromacs/gmxlib/nonbonded/nb_kernel_avx_256_double \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/gromacs/gmxlib/nonbonded/nb_kernel_avx_256_single \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/gromacs/gmxlib/nonbonded/nb_kernel_sparc64_hpc_ace_double \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/gromacs/gmxlib/nonbonded/nb_kernel_sse2_double \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/gromacs/gmxlib/nonbonded/nb_kernel_sse2_single \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/gromacs/gmxlib/nonbonded/nb_kernel_sse4_1_double \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/gromacs/gmxlib/nonbonded/nb_kernel_sse4_1_single
+EXCLUDE_PATTERNS       = /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/gromacs/simd/impl_x86* \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/gromacs/simd/impl_intel* \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/gromacs/simd/impl_ibm* \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/gromacs/simd/impl_arm* \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/gromacs/simd/impl_sparc* \
+                         /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src/gromacs/simd/impl_none
+EXCLUDE_SYMBOLS        = YY* yy* _gmx_sel_yy*
+EXCLUDE_SYMBOLS       += __STDC*
+EXCLUDE_SYMBOLS       += TEST TEST_F TEST_P TYPED_TEST_CASE TYPED_TEST INSTANTIATE_TEST_CASE_P
+EXCLUDE_SYMBOLS       += MOCK_METHOD* MOCK_CONST_METHOD*
+FULL_PATH_NAMES        = YES
+STRIP_FROM_PATH        = /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++
+STRIP_FROM_INC_PATH    = /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src
+INCLUDE_PATH           = /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/src
+HAVE_DOT               = NO
+DOT_PATH               = 
+MSCGEN_PATH            = 
+DOTFILE_DIRS           = /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/docs/doxygen/depgraphs
+
+
+ENABLED_SECTIONS       = 
+
+MACRO_EXPANSION        = YES
+# Extract documentation also for code in headers within #ifdef __cplusplus
+PREDEFINED             = __cplusplus
+# This is for cases where \cond does not work, so that #ifndef can also be used.
+# thread_mpi also uses this, but it is now excluded from the documentation.
+PREDEFINED            += DOXYGEN
+# This makes 'static gmx_inline' functions appear better in the documentation.
+PREDEFINED            += gmx_inline=inline
+# This is for parser.cpp to make it produce code that Doxygen understands
+# and that does not have unnecessary function declarations.
+PREDEFINED            += __STDC__ YYMALLOC=malloc YYFREE=free
+
+JAVADOC_AUTOBRIEF      = YES
+BUILTIN_STL_SUPPORT    = YES
+INLINE_INHERITED_MEMB  = YES
+SORT_BY_SCOPE_NAME     = YES
+ALPHABETICAL_INDEX     = YES
+HTML_DYNAMIC_SECTIONS  = YES
+GENERATE_LATEX         = NO
+# Setting this to NO has a side effect to hide undocumented headers from the
+# file list, which makes it generally look nicer.
+VERBATIM_HEADERS       = NO
+STRIP_CODE_COMMENTS    = NO
+
+EXTRACT_LOCAL_CLASSES  = NO
+# This includes 'static inline' functions from headers in the documentation.
+EXTRACT_STATIC         = YES
+
+ALIASES               += Gromacs=GROMACS
+ALIASES               += linktodevmanual{2}="<A HREF=\"../../dev-manual/\1.html\">\2</A>"
+ALIASES               += linktodevmanual{3}="<A HREF=\"../../dev-manual/\1.html#\2\">\3</A>"
+
+DOT_IMAGE_FORMAT       = svg
+DOT_MULTI_TARGETS      = YES
+# According to Doxygen docs, this is required for svg support on IE
+HTML_FILE_EXTENSION    = .xhtml
+
+OUTPUT_DIRECTORY       = /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/docs/html/doxygen

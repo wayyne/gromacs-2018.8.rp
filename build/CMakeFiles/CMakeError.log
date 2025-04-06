@@ -1,0 +1,541 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_538ac/fast && /bin/gmake -f CMakeFiles/cmTC_538ac.dir/build.make CMakeFiles/cmTC_538ac.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_538ac.dir/src.c.o
+/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_538ac.dir/src.c.o   -c /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_538ac
+/apps/cmake/3.16.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_538ac.dir/link.txt --verbose=1
+/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_538ac.dir/src.c.o  -o cmTC_538ac 
+CMakeFiles/cmTC_538ac.dir/src.c.o: In function `main':
+src.c:(.text+0x2d): undefined reference to `pthread_create'
+src.c:(.text+0x39): undefined reference to `pthread_detach'
+src.c:(.text+0x4a): undefined reference to `pthread_join'
+src.c:(.text+0x5e): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTC_538ac] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_538ac/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_30226/fast && /bin/gmake -f CMakeFiles/cmTC_30226.dir/build.make CMakeFiles/cmTC_30226.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_30226.dir/CheckFunctionExists.c.o
+/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_30226.dir/CheckFunctionExists.c.o   -c /apps/cmake/3.16.4/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_30226
+/apps/cmake/3.16.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30226.dir/link.txt --verbose=1
+/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_30226.dir/CheckFunctionExists.c.o  -o cmTC_30226  -lpthreads 
+/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTC_30226] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_30226/fast] Error 2
+
+
+
+Determining if files io.h exist failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_25c40/fast && /bin/gmake -f CMakeFiles/cmTC_25c40.dir/build.make CMakeFiles/cmTC_25c40.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_25c40.dir/HAVE_IO_H.c.o
+/bin/cc    -o CMakeFiles/cmTC_25c40.dir/HAVE_IO_H.c.o   -c /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CheckIncludeFiles/HAVE_IO_H.c
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CheckIncludeFiles/HAVE_IO_H.c:2:16: fatal error: io.h: No such file or directory
+ #include <io.h>
+                ^
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_25c40.dir/HAVE_IO_H.c.o] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_25c40/fast] Error 2
+
+
+Source:
+/* */
+#include <io.h>
+
+
+int main(void){return 0;}
+
+Determining if the _fileno exist failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_75755/fast && /bin/gmake -f CMakeFiles/cmTC_75755.dir/build.make CMakeFiles/cmTC_75755.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_75755.dir/CheckSymbolExists.cxx.o
+/bin/c++    -std=c++11      -o CMakeFiles/cmTC_75755.dir/CheckSymbolExists.cxx.o -c /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘_fileno’ was not declared in this scope
+   return ((int*)(&_fileno))[argc];
+                   ^
+gmake[1]: *** [CMakeFiles/cmTC_75755.dir/CheckSymbolExists.cxx.o] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_75755/fast] Error 2
+
+
+File /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <stdio.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _fileno
+  return ((int*)(&_fileno))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _commit exist failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_2310b/fast && /bin/gmake -f CMakeFiles/cmTC_2310b.dir/build.make CMakeFiles/cmTC_2310b.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2310b.dir/CheckSymbolExists.cxx.o
+/bin/c++    -std=c++11      -o CMakeFiles/cmTC_2310b.dir/CheckSymbolExists.cxx.o -c /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:2:16: fatal error: io.h: No such file or directory
+ #include <io.h>
+                ^
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_2310b.dir/CheckSymbolExists.cxx.o] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_2310b/fast] Error 2
+
+
+File /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <io.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _commit
+  return ((int*)(&_commit))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the memalign exist failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_5b2c6/fast && /bin/gmake -f CMakeFiles/cmTC_5b2c6.dir/build.make CMakeFiles/cmTC_5b2c6.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5b2c6.dir/CheckSymbolExists.cxx.o
+/bin/c++    -std=c++11      -o CMakeFiles/cmTC_5b2c6.dir/CheckSymbolExists.cxx.o -c /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘memalign’ was not declared in this scope
+   return ((int*)(&memalign))[argc];
+                   ^
+gmake[1]: *** [CMakeFiles/cmTC_5b2c6.dir/CheckSymbolExists.cxx.o] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_5b2c6/fast] Error 2
+
+
+File /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef memalign
+  return ((int*)(&memalign))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C SOURCE FILE Test C_xCORE_AVX512_qopt_zmm_usage_high_FLAG_ACCEPTED failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_31a3d/fast && /bin/gmake -f CMakeFiles/cmTC_31a3d.dir/build.make CMakeFiles/cmTC_31a3d.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_31a3d.dir/src.c.o
+/bin/cc   -DC_xCORE_AVX512_qopt_zmm_usage_high_FLAG_ACCEPTED  -xCORE-AVX512 -qopt-zmm-usage=high   -o CMakeFiles/cmTC_31a3d.dir/src.c.o   -c /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command line option ‘-qopt-zmm-usage=high’
+gmake[1]: *** [CMakeFiles/cmTC_31a3d.dir/src.c.o] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_31a3d/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_xCORE_AVX512_FLAG_ACCEPTED failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_6ddfe/fast && /bin/gmake -f CMakeFiles/cmTC_6ddfe.dir/build.make CMakeFiles/cmTC_6ddfe.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6ddfe.dir/src.c.o
+/bin/cc   -DC_xCORE_AVX512_FLAG_ACCEPTED  -xCORE-AVX512   -o CMakeFiles/cmTC_6ddfe.dir/src.c.o   -c /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.c
+cc: error: language CORE-AVX512 not recognized
+cc: error: language CORE-AVX512 not recognized
+gmake[1]: *** [CMakeFiles/cmTC_6ddfe.dir/src.c.o] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_6ddfe/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_mavx512f_mfma_FLAG_ACCEPTED failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_da88a/fast && /bin/gmake -f CMakeFiles/cmTC_da88a.dir/build.make CMakeFiles/cmTC_da88a.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_da88a.dir/src.c.o
+/bin/cc   -DC_mavx512f_mfma_FLAG_ACCEPTED  -mavx512f -mfma   -o CMakeFiles/cmTC_da88a.dir/src.c.o   -c /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command line option ‘-mavx512f’
+gmake[1]: *** [CMakeFiles/cmTC_da88a.dir/src.c.o] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_da88a/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_mavx512f_FLAG_ACCEPTED failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_9bf44/fast && /bin/gmake -f CMakeFiles/cmTC_9bf44.dir/build.make CMakeFiles/cmTC_9bf44.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9bf44.dir/src.c.o
+/bin/cc   -DC_mavx512f_FLAG_ACCEPTED  -mavx512f   -o CMakeFiles/cmTC_9bf44.dir/src.c.o   -c /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command line option ‘-mavx512f’
+gmake[1]: *** [CMakeFiles/cmTC_9bf44.dir/src.c.o] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_9bf44/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_arch_AVX_FLAG_ACCEPTED failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_01084/fast && /bin/gmake -f CMakeFiles/cmTC_01084.dir/build.make CMakeFiles/cmTC_01084.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_01084.dir/src.c.o
+/bin/cc   -DC_arch_AVX_FLAG_ACCEPTED  /arch:AVX   -o CMakeFiles/cmTC_01084.dir/src.c.o   -c /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.c
+cc: error: /arch:AVX: No such file or directory
+gmake[1]: *** [CMakeFiles/cmTC_01084.dir/src.c.o] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_01084/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_hgnu_FLAG_ACCEPTED failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_6a04a/fast && /bin/gmake -f CMakeFiles/cmTC_6a04a.dir/build.make CMakeFiles/cmTC_6a04a.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6a04a.dir/src.c.o
+/bin/cc   -DC_hgnu_FLAG_ACCEPTED  -hgnu   -o CMakeFiles/cmTC_6a04a.dir/src.c.o   -c /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command line option ‘-h’
+gmake[1]: *** [CMakeFiles/cmTC_6a04a.dir/src.c.o] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_6a04a/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test C_COMPILE_WORKS_WITHOUT_SPECIAL_FLAGS failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_9ffd8/fast && /bin/gmake -f CMakeFiles/cmTC_9ffd8.dir/build.make CMakeFiles/cmTC_9ffd8.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9ffd8.dir/src.c.o
+/bin/cc   -DC_COMPILE_WORKS_WITHOUT_SPECIAL_FLAGS   -o CMakeFiles/cmTC_9ffd8.dir/src.c.o   -c /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.c
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.c:2:21: error: unknown type name ‘__m512’
+          int main(){__m512 x=_mm512_set1_ps(0.5); __m512 y=_mm512_fmadd_ps(x,x,x);
+                     ^
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.c:2:51: error: unknown type name ‘__m512’
+          int main(){__m512 x=_mm512_set1_ps(0.5); __m512 y=_mm512_fmadd_ps(x,x,x);
+                                                   ^
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.c:3:11: error: unknown type name ‘__m512i’
+           __m512i i = _mm512_set_epi32(15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0);
+           ^
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.c:4:11: error: unknown type name ‘__mmask16’
+           __mmask16 mask = (short)(0xffff);
+           ^
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.c:7:56: error: ‘_CMP_LT_OS’ undeclared (first use in this function)
+           return idata[0]*(int)(_mm512_cmp_ps_mask(x,y,_CMP_LT_OS));}
+                                                        ^
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.c:7:56: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_9ffd8.dir/src.c.o] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_9ffd8/fast] Error 2
+
+
+Source file was:
+#include<immintrin.h>
+         int main(){__m512 x=_mm512_set1_ps(0.5); __m512 y=_mm512_fmadd_ps(x,x,x);
+          __m512i i = _mm512_set_epi32(15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0);
+          __mmask16 mask = (short)(0xffff);
+          int idata[16]; i  = _mm512_maskz_permutexvar_epi32(mask, i, i);
+          _mm512_storeu_si512(idata, i);
+          return idata[0]*(int)(_mm512_cmp_ps_mask(x,y,_CMP_LT_OS));}
+Performing C++ SOURCE FILE Test CXX_xCORE_AVX512_qopt_zmm_usage_high_FLAG_ACCEPTED failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_06835/fast && /bin/gmake -f CMakeFiles/cmTC_06835.dir/build.make CMakeFiles/cmTC_06835.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_06835.dir/src.cxx.o
+/bin/c++    -std=c++11   -DCXX_xCORE_AVX512_qopt_zmm_usage_high_FLAG_ACCEPTED  -xCORE-AVX512 -qopt-zmm-usage=high   -o CMakeFiles/cmTC_06835.dir/src.cxx.o -c /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option ‘-qopt-zmm-usage=high’
+gmake[1]: *** [CMakeFiles/cmTC_06835.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_06835/fast] Error 2
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_xCORE_AVX512_FLAG_ACCEPTED failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_bfa04/fast && /bin/gmake -f CMakeFiles/cmTC_bfa04.dir/build.make CMakeFiles/cmTC_bfa04.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_bfa04.dir/src.cxx.o
+/bin/c++    -std=c++11   -DCXX_xCORE_AVX512_FLAG_ACCEPTED  -xCORE-AVX512   -o CMakeFiles/cmTC_bfa04.dir/src.cxx.o -c /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: language CORE-AVX512 not recognized
+c++: error: language CORE-AVX512 not recognized
+gmake[1]: *** [CMakeFiles/cmTC_bfa04.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_bfa04/fast] Error 2
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_mavx512f_mfma_FLAG_ACCEPTED failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_c8dfd/fast && /bin/gmake -f CMakeFiles/cmTC_c8dfd.dir/build.make CMakeFiles/cmTC_c8dfd.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c8dfd.dir/src.cxx.o
+/bin/c++    -std=c++11   -DCXX_mavx512f_mfma_FLAG_ACCEPTED  -mavx512f -mfma   -o CMakeFiles/cmTC_c8dfd.dir/src.cxx.o -c /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option ‘-mavx512f’
+gmake[1]: *** [CMakeFiles/cmTC_c8dfd.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_c8dfd/fast] Error 2
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_mavx512f_FLAG_ACCEPTED failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_21998/fast && /bin/gmake -f CMakeFiles/cmTC_21998.dir/build.make CMakeFiles/cmTC_21998.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_21998.dir/src.cxx.o
+/bin/c++    -std=c++11   -DCXX_mavx512f_FLAG_ACCEPTED  -mavx512f   -o CMakeFiles/cmTC_21998.dir/src.cxx.o -c /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option ‘-mavx512f’
+gmake[1]: *** [CMakeFiles/cmTC_21998.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_21998/fast] Error 2
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_arch_AVX_FLAG_ACCEPTED failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_38fa8/fast && /bin/gmake -f CMakeFiles/cmTC_38fa8.dir/build.make CMakeFiles/cmTC_38fa8.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_38fa8.dir/src.cxx.o
+/bin/c++    -std=c++11   -DCXX_arch_AVX_FLAG_ACCEPTED  /arch:AVX   -o CMakeFiles/cmTC_38fa8.dir/src.cxx.o -c /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: /arch:AVX: No such file or directory
+gmake[1]: *** [CMakeFiles/cmTC_38fa8.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_38fa8/fast] Error 2
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_hgnu_FLAG_ACCEPTED failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_24ae7/fast && /bin/gmake -f CMakeFiles/cmTC_24ae7.dir/build.make CMakeFiles/cmTC_24ae7.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_24ae7.dir/src.cxx.o
+/bin/c++    -std=c++11   -DCXX_hgnu_FLAG_ACCEPTED  -hgnu   -o CMakeFiles/cmTC_24ae7.dir/src.cxx.o -c /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option ‘-h’
+gmake[1]: *** [CMakeFiles/cmTC_24ae7.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_24ae7/fast] Error 2
+
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test CXX_COMPILE_WORKS_WITHOUT_SPECIAL_FLAGS failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_52df8/fast && /bin/gmake -f CMakeFiles/cmTC_52df8.dir/build.make CMakeFiles/cmTC_52df8.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_52df8.dir/src.cxx.o
+/bin/c++    -std=c++11   -DCXX_COMPILE_WORKS_WITHOUT_SPECIAL_FLAGS   -o CMakeFiles/cmTC_52df8.dir/src.cxx.o -c /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx:2:21: error: ‘__m512’ was not declared in this scope
+          int main(){__m512 x=_mm512_set1_ps(0.5); __m512 y=_mm512_fmadd_ps(x,x,x);
+                     ^
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx:2:28: error: expected ‘;’ before ‘x’
+          int main(){__m512 x=_mm512_set1_ps(0.5); __m512 y=_mm512_fmadd_ps(x,x,x);
+                            ^
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx:2:58: error: expected ‘;’ before ‘y’
+          int main(){__m512 x=_mm512_set1_ps(0.5); __m512 y=_mm512_fmadd_ps(x,x,x);
+                                                          ^
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx:3:11: error: ‘__m512i’ was not declared in this scope
+           __m512i i = _mm512_set_epi32(15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0);
+           ^
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx:3:19: error: expected ‘;’ before ‘i’
+           __m512i i = _mm512_set_epi32(15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0);
+                   ^
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx:4:11: error: ‘__mmask16’ was not declared in this scope
+           __mmask16 mask = (short)(0xffff);
+           ^
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx:4:21: error: expected ‘;’ before ‘mask’
+           __mmask16 mask = (short)(0xffff);
+                     ^
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx:5:26: error: ‘i’ was not declared in this scope
+           int idata[16]; i  = _mm512_maskz_permutexvar_epi32(mask, i, i);
+                          ^
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx:5:62: error: ‘mask’ was not declared in this scope
+           int idata[16]; i  = _mm512_maskz_permutexvar_epi32(mask, i, i);
+                                                              ^
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx:5:72: error: ‘_mm512_maskz_permutexvar_epi32’ was not declared in this scope
+           int idata[16]; i  = _mm512_maskz_permutexvar_epi32(mask, i, i);
+                                                                        ^
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx:6:39: error: ‘_mm512_storeu_si512’ was not declared in this scope
+           _mm512_storeu_si512(idata, i);
+                                       ^
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx:7:52: error: ‘x’ was not declared in this scope
+           return idata[0]*(int)(_mm512_cmp_ps_mask(x,y,_CMP_LT_OS));}
+                                                    ^
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx:7:54: error: ‘y’ was not declared in this scope
+           return idata[0]*(int)(_mm512_cmp_ps_mask(x,y,_CMP_LT_OS));}
+                                                      ^
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx:7:56: error: ‘_CMP_LT_OS’ was not declared in this scope
+           return idata[0]*(int)(_mm512_cmp_ps_mask(x,y,_CMP_LT_OS));}
+                                                        ^
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.cxx:7:66: error: ‘_mm512_cmp_ps_mask’ was not declared in this scope
+           return idata[0]*(int)(_mm512_cmp_ps_mask(x,y,_CMP_LT_OS));}
+                                                                  ^
+gmake[1]: *** [CMakeFiles/cmTC_52df8.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_52df8/fast] Error 2
+
+
+Source file was:
+#include<immintrin.h>
+         int main(){__m512 x=_mm512_set1_ps(0.5); __m512 y=_mm512_fmadd_ps(x,x,x);
+          __m512i i = _mm512_set_epi32(15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0);
+          __mmask16 mask = (short)(0xffff);
+          int idata[16]; i  = _mm512_maskz_permutexvar_epi32(mask, i, i);
+          _mm512_storeu_si512(idata, i);
+          return idata[0]*(int)(_mm512_cmp_ps_mask(x,y,_CMP_LT_OS));}
+Performing C SOURCE FILE Test _callconv___vectorcall failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_687fc/fast && /bin/gmake -f CMakeFiles/cmTC_687fc.dir/build.make CMakeFiles/cmTC_687fc.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_687fc.dir/src.c.o
+/bin/cc   -D_callconv___vectorcall   -o CMakeFiles/cmTC_687fc.dir/src.c.o   -c /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.c
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.c:2:9: warning: unknown option after ‘#pragma GCC diagnostic’ kind [-Wpragmas]
+ #pragma GCC diagnostic error "-Wignored-attributes"
+         ^
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.c:3:18: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘f’
+ int __vectorcall f(int i) {return i;} int main(void) {return f(0);}
+                  ^
+gmake[1]: *** [CMakeFiles/cmTC_687fc.dir/src.c.o] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_687fc/fast] Error 2
+
+
+Source file was:
+
+#pragma GCC diagnostic error "-Wignored-attributes"
+int __vectorcall f(int i) {return i;} int main(void) {return f(0);}
+
+Performing C SOURCE FILE Test _callconv___regcall failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_e8169/fast && /bin/gmake -f CMakeFiles/cmTC_e8169.dir/build.make CMakeFiles/cmTC_e8169.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e8169.dir/src.c.o
+/bin/cc   -D_callconv___regcall   -o CMakeFiles/cmTC_e8169.dir/src.c.o   -c /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.c
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.c:2:9: warning: unknown option after ‘#pragma GCC diagnostic’ kind [-Wpragmas]
+ #pragma GCC diagnostic error "-Wignored-attributes"
+         ^
+/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp/src.c:3:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘f’
+ int __regcall f(int i) {return i;} int main(void) {return f(0);}
+               ^
+gmake[1]: *** [CMakeFiles/cmTC_e8169.dir/src.c.o] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_e8169/fast] Error 2
+
+
+Source file was:
+
+#pragma GCC diagnostic error "-Wignored-attributes"
+int __regcall f(int i) {return i;} int main(void) {return f(0);}
+
+Determining if the function sgemm_ exists failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_61df8/fast && /bin/gmake -f CMakeFiles/cmTC_61df8.dir/build.make CMakeFiles/cmTC_61df8.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_61df8.dir/CheckFunctionExists.c.o
+/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_61df8.dir/CheckFunctionExists.c.o   -c /apps/cmake/3.16.4/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_61df8
+/apps/cmake/3.16.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61df8.dir/link.txt --verbose=1
+/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_    CMakeFiles/cmTC_61df8.dir/CheckFunctionExists.c.o  -o cmTC_61df8 
+CMakeFiles/cmTC_61df8.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `sgemm_'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTC_61df8] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_61df8/fast] Error 2
+
+
+
+Determining if the function cheev_ exists failed with the following output:
+Change Dir: /work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake cmTC_e6524/fast && /bin/gmake -f CMakeFiles/cmTC_e6524.dir/build.make CMakeFiles/cmTC_e6524.dir/build
+gmake[1]: Entering directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e6524.dir/CheckFunctionExists.c.o
+/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_   -o CMakeFiles/cmTC_e6524.dir/CheckFunctionExists.c.o   -c /apps/cmake/3.16.4/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e6524
+/apps/cmake/3.16.4/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6524.dir/link.txt --verbose=1
+/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_    CMakeFiles/cmTC_e6524.dir/CheckFunctionExists.c.o  -o cmTC_e6524  /usr/lib64/libblas.so 
+CMakeFiles/cmTC_e6524.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `cheev_'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTC_e6524] Error 1
+gmake[1]: Leaving directory `/work_bgfs/g/gdayhoff/grayson/lab/gmx+/gromacs-2018.8++/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_e6524/fast] Error 2
+
+
+

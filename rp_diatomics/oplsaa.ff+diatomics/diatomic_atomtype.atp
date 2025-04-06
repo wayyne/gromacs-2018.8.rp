@@ -1,0 +1,15 @@
+ guy_001     1.00784  ; hydrogen in H2 
+ guy_002    14.00670  ; nitrogen in N2 
+ guy_003    15.99940  ; oxygen in O2 
+ guy_004    18.99840  ; florine in F2 
+ guy_005    35.45300  ; chlorine in Cl2 
+ guy_006    79.90400  ; bromine in Br2 
+ guy_007   126.90447  ; iodine in I2 
+ guy_008    12.01100  ; carbon in CO 
+ guy_009    15.99940  ; oxygen in CO 
+ guy_010    14.00670  ; nitrogen in NO 
+ guy_011    15.99940  ; oxygen in NO
+ guy_012     1.00784  ; hyrogen in HCl
+ guy_013    35.45300  ; chlorine in HCl
+ guy_014     1.00784  ; hydrogen in Hbr
+ guy_015    79.90400  ; bromine in HBr
