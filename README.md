@@ -9,3 +9,5 @@ Tensorflow C API is required.
 Otherwise the canonical gromacs installation process still applies.
 
 Files for patching the opalsAA force field for the diatomics described in the manuscript are also in rp_diatomics, and in build.
+
+For questions or comments email gdayhoff[at]rx[dot]umaryland[dot]edu
